@@ -11,7 +11,205 @@
   <title>
    iPhone IMU to Direction &amp; Rotation
   </title>
-  <link href="data:text/css;base64,KiB7CiAgICBtYXJnaW46IDA7CiAgICBwYWRkaW5nOiAwOwogICAgYm94LXNpemluZzogYm9yZGVyLWJveDsKfQoKYm9keSB7CiAgICBmb250LWZhbWlseTogLWFwcGxlLXN5c3RlbSwgQmxpbmtNYWNTeXN0ZW1Gb250LCAnU2Vnb2UgVUknLCBSb2JvdG8sIHNhbnMtc2VyaWY7CiAgICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoMTM1ZGVnLCAjNjY3ZWVhIDAlLCAjNzY0YmEyIDEwMCUpOwogICAgbWluLWhlaWdodDogMTAwdmg7CiAgICBjb2xvcjogd2hpdGU7Cn0KCi5jb250YWluZXIgewogICAgbWF4LXdpZHRoOiAxMDAwcHg7CiAgICBtYXJnaW46IDAgYXV0bzsKICAgIHBhZGRpbmc6IDIwcHg7Cn0KCmgxIHsKICAgIHRleHQtYWxpZ246IGNlbnRlcjsKICAgIG1hcmdpbi1ib3R0b206IDMwcHg7CiAgICBmb250LXNpemU6IDIuNWVtOwogICAgdGV4dC1zaGFkb3c6IDJweCAycHggNHB4IHJnYmEoMCwwLDAsMC4zKTsKfQoKI3JlcXVlc3RQZXJtaXNzaW9uIHsKICAgIGRpc3BsYXk6IGJsb2NrOwogICAgbWFyZ2luOiAwIGF1dG8gMzBweDsKICAgIHBhZGRpbmc6IDE1cHggMzBweDsKICAgIGZvbnQtc2l6ZTogMThweDsKICAgIGJhY2tncm91bmQ6ICM0Q0FGNTA7CiAgICBjb2xvcjogd2hpdGU7CiAgICBib3JkZXI6IG5vbmU7CiAgICBib3JkZXItcmFkaXVzOiAyNXB4OwogICAgY3Vyc29yOiBwb2ludGVyOwogICAgdHJhbnNpdGlvbjogYWxsIDAuM3MgZWFzZTsKfQoKI3JlcXVlc3RQZXJtaXNzaW9uOmhvdmVyIHsKICAgIGJhY2tncm91bmQ6ICM0NWEwNDk7CiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoLTJweCk7Cn0KCi5zZW5zb3ItZGF0YSB7CiAgICBkaXNwbGF5OiBncmlkOwogICAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiByZXBlYXQoYXV0by1maXQsIG1pbm1heCgyODBweCwgMWZyKSk7CiAgICBnYXA6IDIwcHg7CiAgICBtYXJnaW4tYm90dG9tOiAzMHB4Owp9Cgoub3JpZW50YXRpb24tZGF0YSwgLm1vdGlvbi1kYXRhLCAuY29tcHV0ZWQtZGF0YSwgLnNwZWVkLWRhdGEgewogICAgYmFja2dyb3VuZDogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjEpOwogICAgYmFja2Ryb3AtZmlsdGVyOiBibHVyKDEwcHgpOwogICAgYm9yZGVyLXJhZGl1czogMTVweDsKICAgIHBhZGRpbmc6IDIwcHg7CiAgICBib3JkZXI6IDFweCBzb2xpZCByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMik7Cn0KCi5zcGVlZC1kYXRhIHsKICAgIGJhY2tncm91bmQ6IHJnYmEoMjU1LCAyMTUsIDAsIDAuMTUpOwogICAgYm9yZGVyOiAxcHggc29saWQgcmdiYSgyNTUsIDIxNSwgMCwgMC4zKTsKfQoKaDIgewogICAgbWFyZ2luLWJvdHRvbTogMTVweDsKICAgIGNvbG9yOiAjRkZENzAwOwogICAgZm9udC1zaXplOiAxLjNlbTsKfQoKLnNwZWVkLWRhdGEgaDIgewogICAgY29sb3I6ICNGRkE1MDA7Cn0KCi5kYXRhLXJvdyB7CiAgICBkaXNwbGF5OiBmbGV4OwogICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuOwogICAgbWFyZ2luLWJvdHRvbTogMTBweDsKICAgIHBhZGRpbmc6IDhweCAwOwogICAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4xKTsKfQoKLmRhdGEtcm93Omxhc3QtY2hpbGQgewogICAgYm9yZGVyLWJvdHRvbTogbm9uZTsKfQoKLnJlc2V0LWJ0biB7CiAgICB3aWR0aDogMTAwJTsKICAgIHBhZGRpbmc6IDEwcHg7CiAgICBtYXJnaW4tdG9wOiAxNXB4OwogICAgYmFja2dyb3VuZDogI2ZmNmI2YjsKICAgIGNvbG9yOiB3aGl0ZTsKICAgIGJvcmRlcjogbm9uZTsKICAgIGJvcmRlci1yYWRpdXM6IDhweDsKICAgIGN1cnNvcjogcG9pbnRlcjsKICAgIGZvbnQtc2l6ZTogMTRweDsKICAgIHRyYW5zaXRpb246IGJhY2tncm91bmQgMC4zcyBlYXNlOwp9CgoucmVzZXQtYnRuOmhvdmVyIHsKICAgIGJhY2tncm91bmQ6ICNmZjUyNTI7Cn0KCi52aXN1YWwtaW5kaWNhdG9yIHsKICAgIGRpc3BsYXk6IGZsZXg7CiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjsKICAgIG1hcmdpbjogMzBweCAwOwp9CgouY29tcGFzcyB7CiAgICB3aWR0aDogMjAwcHg7CiAgICBoZWlnaHQ6IDIwMHB4OwogICAgYm9yZGVyOiAzcHggc29saWQgd2hpdGU7CiAgICBib3JkZXItcmFkaXVzOiA1MCU7CiAgICBwb3NpdGlvbjogcmVsYXRpdmU7CiAgICBiYWNrZ3JvdW5kOiByYWRpYWwtZ3JhZGllbnQoY2lyY2xlLCByZ2JhKDI1NSwyNTUsMjU1LDAuMSkgMCUsIHJnYmEoMjU1LDI1NSwyNTUsMC4wNSkgMTAwJSk7Cn0KCi5jb21wYXNzOjpiZWZvcmUgewogICAgY29udGVudDogJ04nOwogICAgcG9zaXRpb246IGFic29sdXRlOwogICAgdG9wOiAxMHB4OwogICAgbGVmdDogNTAlOwogICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVYKC01MCUpOwogICAgZm9udC13ZWlnaHQ6IGJvbGQ7CiAgICBmb250LXNpemU6IDE4cHg7Cn0KCi5jb21wYXNzOjphZnRlciB7CiAgICBjb250ZW50OiAnUyc7CiAgICBwb3NpdGlvbjogYWJzb2x1dGU7CiAgICBib3R0b206IDEwcHg7CiAgICBsZWZ0OiA1MCU7CiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVgoLTUwJSk7CiAgICBmb250LXdlaWdodDogYm9sZDsKICAgIGZvbnQtc2l6ZTogMThweDsKfQoKLm5lZWRsZSB7CiAgICBwb3NpdGlvbjogYWJzb2x1dGU7CiAgICB0b3A6IDUwJTsKICAgIGxlZnQ6IDUwJTsKICAgIHdpZHRoOiA0cHg7CiAgICBoZWlnaHQ6IDgwcHg7CiAgICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQodG8gdG9wLCAjZmY0NDQ0IDAlLCAjZmZmZjQ0IDEwMCUpOwogICAgdHJhbnNmb3JtLW9yaWdpbjogYm90dG9tIGNlbnRlcjsKICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC0xMDAlKTsKICAgIGJvcmRlci1yYWRpdXM6IDJweDsKICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAwLjFzIGVhc2U7Cn0KCi5jZW50ZXItZG90IHsKICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTsKICAgIHRvcDogNTAlOwogICAgbGVmdDogNTAlOwogICAgd2lkdGg6IDEycHg7CiAgICBoZWlnaHQ6IDEycHg7CiAgICBiYWNrZ3JvdW5kOiB3aGl0ZTsKICAgIGJvcmRlci1yYWRpdXM6IDUwJTsKICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpOwp9Cgouc3RhdHVzIHsKICAgIHRleHQtYWxpZ246IGNlbnRlcjsKICAgIHBhZGRpbmc6IDE1cHg7CiAgICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuMyk7CiAgICBib3JkZXItcmFkaXVzOiAxMHB4OwogICAgbWFyZ2luLXRvcDogMjBweDsKfQoKQG1lZGlhIChtYXgtd2lkdGg6IDc2OHB4KSB7CiAgICAuY29udGFpbmVyIHsKICAgICAgICBwYWRkaW5nOiAxMHB4OwogICAgfQogICAgCiAgICBoMSB7CiAgICAgICAgZm9udC1zaXplOiAyZW07CiAgICB9CiAgICAKICAgIC5zZW5zb3ItZGF0YSB7CiAgICAgICAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiAxZnI7CiAgICB9CiAgICAKICAgIC5jb21wYXNzIHsKICAgICAgICB3aWR0aDogMTUwcHg7CiAgICAgICAgaGVpZ2h0OiAxNTBweDsKICAgIH0KfQo=" rel="stylesheet"/>
+  <style>
+   * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        #requestPermission {
+            display: block;
+            margin: 0 auto 30px;
+            padding: 15px 30px;
+            font-size: 18px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #requestPermission:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+        }
+
+        .sensor-data {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .orientation-data, .motion-data, .computed-data, .speed-data {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .speed-data {
+            background: rgba(255, 215, 0, 0.15);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            color: #FFD700;
+            font-size: 1.3em;
+        }
+
+        .speed-data h2 {
+            color: #FFA500;
+        }
+
+        .data-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .data-row:last-child {
+            border-bottom: none;
+        }
+
+        .reset-btn {
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s ease;
+        }
+
+        .reset-btn:hover {
+            background: #ff5252;
+        }
+
+        .visual-indicator {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .compass {
+            width: 200px;
+            height: 200px;
+            border: 3px solid white;
+            border-radius: 50%;
+            position: relative;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+        }
+
+        .compass::before {
+            content: 'N';
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .compass::after {
+            content: 'S';
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .needle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 4px;
+            height: 80px;
+            background: linear-gradient(to top, #ff4444 0%, #ffff44 100%);
+            transform-origin: bottom center;
+            transform: translate(-50%, -100%);
+            border-radius: 2px;
+            transition: transform 0.1s ease;
+        }
+
+        .center-dot {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 12px;
+            height: 12px;
+            background: white;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .status {
+            text-align: center;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .debug {
+            background: rgba(255, 0, 0, 0.2);
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .sensor-data {
+                grid-template-columns: 1fr;
+            }
+            
+            .compass {
+                width: 150px;
+                height: 150px;
+            }
+        }
+  </style>
  </head>
  <body>
   <div class="container">
@@ -212,8 +410,421 @@
    <div class="status" id="status">
     Click "Request Sensor Permission" to start
    </div>
+   <div class="debug" id="debug">
+    Debug info will appear here...
+   </div>
   </div>
-  <script src="imu-processor.js">
+  <script>
+   class IMUProcessor {
+            constructor() {
+                this.isSupported = this.checkSupport();
+                this.isPermissionGranted = false;
+                this.lastTimestamp = 0;
+                
+                // Complementary filter for smoother readings
+                this.filteredAlpha = 0;
+                this.filteredBeta = 0;
+                this.filteredGamma = 0;
+                
+                // Speed tracking variables
+                this.velocity = { x: 0, y: 0, z: 0 };
+                this.speed = 0;
+                this.lastAcceleration = { x: 0, y: 0, z: 0 };
+                this.lastMotionTimestamp = 0;
+                this.speedHistory = [];
+                this.maxHistoryLength = 10;
+                
+                // Calibration for gravity removal
+                this.gravityCalibrated = false;
+                this.gravity = { x: 0, y: 0, z: 9.81 };
+                this.calibrationSamples = [];
+                this.calibrationCount = 0;
+                this.maxCalibrationSamples = 50;
+                
+                this.debug('IMU Processor initialized');
+                this.init();
+            }
+
+            debug(message) {
+                const debugEl = document.getElementById('debug');
+                if (debugEl) {
+                    debugEl.innerHTML += new Date().toLocaleTimeString() + ': ' + message + '<br>';
+                    debugEl.scrollTop = debugEl.scrollHeight;
+                }
+                console.log(message);
+            }
+
+            checkSupport() {
+                const orientationSupported = 'DeviceOrientationEvent' in window;
+                const motionSupported = 'DeviceMotionEvent' in window;
+                
+                this.debug(`Orientation supported: ${orientationSupported}`);
+                this.debug(`Motion supported: ${motionSupported}`);
+                this.debug(`User agent: ${navigator.userAgent}`);
+                
+                return orientationSupported && motionSupported;
+            }
+
+            init() {
+                const button = document.getElementById('requestPermission');
+                const status = document.getElementById('status');
+
+                if (!this.isSupported) {
+                    status.textContent = 'Device orientation/motion not supported on this device';
+                    button.style.display = 'none';
+                    this.debug('Device sensors not supported');
+                    return;
+                }
+
+                this.debug('Adding click listener to button');
+                button.addEventListener('click', (e) => {
+                    this.debug('Button clicked');
+                    this.requestPermission();
+                });
+
+                // Test if we can access sensors without permission (Android/older iOS)
+                this.testSensorAccess();
+            }
+
+            testSensorAccess() {
+                this.debug('Testing sensor access...');
+                
+                const testOrientation = (event) => {
+                    this.debug(`Test orientation event: alpha=${event.alpha}, beta=${event.beta}, gamma=${event.gamma}`);
+                    if (event.alpha !== null || event.beta !== null || event.gamma !== null) {
+                        this.debug('Sensors work without permission request');
+                        document.getElementById('status').textContent = 'Sensors are working! No permission needed.';
+                        window.removeEventListener('deviceorientation', testOrientation);
+                        this.startListening();
+                    }
+                };
+
+                window.addEventListener('deviceorientation', testOrientation);
+                
+                // Remove test listener after 2 seconds
+                setTimeout(() => {
+                    window.removeEventListener('deviceorientation', testOrientation);
+                    this.debug('Test sensor access timeout');
+                }, 2000);
+            }
+
+            async requestPermission() {
+                const status = document.getElementById('status');
+                this.debug('Requesting permission...');
+                
+                try {
+                    // Check if we're on iOS 13+ that requires permission
+                    if (typeof DeviceOrientationEvent.requestPermission === 'function') {
+                        this.debug('iOS 13+ detected, requesting permission');
+                        status.textContent = 'Requesting orientation permission...';
+                        
+                        const orientationPermission = await DeviceOrientationEvent.requestPermission();
+                        this.debug(`Orientation permission: ${orientationPermission}`);
+                        
+                        if (orientationPermission === 'granted') {
+                            status.textContent = 'Requesting motion permission...';
+                            
+                            if (typeof DeviceMotionEvent.requestPermission === 'function') {
+                                const motionPermission = await DeviceMotionEvent.requestPermission();
+                                this.debug(`Motion permission: ${motionPermission}`);
+                                
+                                if (motionPermission === 'granted') {
+                                    this.isPermissionGranted = true;
+                                    this.startListening();
+                                    status.textContent = 'Sensors active - keep device still for 2 seconds to calibrate gravity...';
+                                } else {
+                                    status.textContent = 'Motion permission denied';
+                                    this.debug('Motion permission denied');
+                                }
+                            } else {
+                                // Motion permission not required
+                                this.isPermissionGranted = true;
+                                this.startListening();
+                                status.textContent = 'Sensors active - keep device still for 2 seconds to calibrate gravity...';
+                            }
+                        } else {
+                            status.textContent = 'Orientation permission denied';
+                            this.debug('Orientation permission denied');
+                        }
+                    } else {
+                        // For non-iOS devices or older iOS versions
+                        this.debug('No permission required, starting sensors');
+                        this.isPermissionGranted = true;
+                        this.startListening();
+                        status.textContent = 'Sensors active - keep device still for 2 seconds to calibrate gravity...';
+                    }
+                } catch (error) {
+                    this.debug(`Error requesting permission: ${error.message}`);
+                    console.error('Error requesting permission:', error);
+                    status.textContent = 'Error requesting sensor permission: ' + error.message;
+                }
+            }
+
+            startListening() {
+                this.debug('Starting to listen for sensor events');
+                
+                // Device Orientation (compass, tilt)
+                window.addEventListener('deviceorientation', (event) => {
+                    this.handleOrientation(event);
+                });
+
+                // Device Motion (acceleration, rotation rate)
+                window.addEventListener('devicemotion', (event) => {
+                    this.handleMotion(event);
+                });
+
+                document.getElementById('requestPermission').style.display = 'none';
+                
+                // Add reset button functionality
+                const resetButton = document.getElementById('resetSpeed');
+                if (resetButton) {
+                    resetButton.addEventListener('click', () => this.resetSpeed());
+                }
+            }
+
+            handleOrientation(event) {
+                const alpha = event.alpha; // Z-axis (0-360°) - compass heading
+                const beta = event.beta;   // X-axis (-180 to 180°) - front/back tilt
+                const gamma = event.gamma; // Y-axis (-90 to 90°) - left/right tilt
+
+                if (alpha !== null && beta !== null && gamma !== null) {
+                    // Apply complementary filter for smoother readings
+                    this.filteredAlpha = this.applyFilter(this.filteredAlpha, alpha, 0.1);
+                    this.filteredBeta = this.applyFilter(this.filteredBeta, beta, 0.1);
+                    this.filteredGamma = this.applyFilter(this.filteredGamma, gamma, 0.1);
+
+                    this.updateOrientationDisplay(this.filteredAlpha, this.filteredBeta, this.filteredGamma);
+                    this.updateComputedValues(this.filteredAlpha, this.filteredBeta, this.filteredGamma);
+                    this.updateCompass(this.filteredAlpha);
+                } else {
+                    this.debug(`Orientation event with null values: alpha=${alpha}, beta=${beta}, gamma=${gamma}`);
+                }
+            }
+
+            handleMotion(event) {
+                const acceleration = event.acceleration;
+                const accelerationIncludingGravity = event.accelerationIncludingGravity;
+                const rotationRate = event.rotationRate;
+                const currentTime = event.timeStamp || Date.now();
+
+                if (acceleration && (acceleration.x !== null || acceleration.y !== null || acceleration.z !== null)) {
+                    document.getElementById('accelX').textContent = acceleration.x?.toFixed(2) || '--';
+                    document.getElementById('accelY').textContent = acceleration.y?.toFixed(2) || '--';
+                    document.getElementById('accelZ').textContent = acceleration.z?.toFixed(2) || '--';
+                    
+                    // Calculate speed from acceleration
+                    this.calculateSpeed(acceleration, currentTime);
+                } else if (accelerationIncludingGravity && (accelerationIncludingGravity.x !== null || accelerationIncludingGravity.y !== null || accelerationIncludingGravity.z !== null)) {
+                    // Fallback for devices that don't provide gravity-free acceleration
+                    this.handleAccelerationWithGravity(accelerationIncludingGravity, currentTime);
+                } else {
+                    this.debug('Motion event with no valid acceleration data');
+                }
+
+                if (rotationRate && (rotationRate.alpha !== null || rotationRate.beta !== null || rotationRate.gamma !== null)) {
+                    document.getElementById('rotX').textContent = rotationRate.alpha?.toFixed(2) || '--';
+                    document.getElementById('rotY').textContent = rotationRate.beta?.toFixed(2) || '--';
+                    document.getElementById('rotZ').textContent = rotationRate.gamma?.toFixed(2) || '--';
+                }
+            }
+
+            handleAccelerationWithGravity(accelWithGravity, currentTime) {
+                if (!this.gravityCalibrated) {
+                    this.calibrateGravity(accelWithGravity);
+                    return;
+                }
+
+                // Remove gravity from acceleration
+                const acceleration = {
+                    x: accelWithGravity.x - this.gravity.x,
+                    y: accelWithGravity.y - this.gravity.y,
+                    z: accelWithGravity.z - this.gravity.z
+                };
+
+                document.getElementById('accelX').textContent = acceleration.x?.toFixed(2) || '--';
+                document.getElementById('accelY').textContent = acceleration.y?.toFixed(2) || '--';
+                document.getElementById('accelZ').textContent = acceleration.z?.toFixed(2) || '--';
+
+                this.calculateSpeed(acceleration, currentTime);
+            }
+
+            calibrateGravity(accelWithGravity) {
+                this.calibrationSamples.push({
+                    x: accelWithGravity.x,
+                    y: accelWithGravity.y,
+                    z: accelWithGravity.z
+                });
+
+                this.calibrationCount++;
+
+                if (this.calibrationCount >= this.maxCalibrationSamples) {
+                    // Calculate average gravity vector
+                    const avgGravity = this.calibrationSamples.reduce((acc, sample) => ({
+                        x: acc.x + sample.x,
+                        y: acc.y + sample.y,
+                        z: acc.z + sample.z
+                    }), { x: 0, y: 0, z: 0 });
+
+                    this.gravity = {
+                        x: avgGravity.x / this.calibrationSamples.length,
+                        y: avgGravity.y / this.calibrationSamples.length,
+                        z: avgGravity.z / this.calibrationSamples.length
+                    };
+
+                    this.gravityCalibrated = true;
+                    document.getElementById('status').textContent = 'Gravity calibrated! Move your device to see speed data.';
+                    this.debug(`Gravity calibrated: x=${this.gravity.x.toFixed(2)}, y=${this.gravity.y.toFixed(2)}, z=${this.gravity.z.toFixed(2)}`);
+                } else {
+                    const progress = Math.round((this.calibrationCount / this.maxCalibrationSamples) * 100);
+                    document.getElementById('status').textContent = `Calibrating gravity... ${progress}%`;
+                }
+            }
+
+            calculateSpeed(acceleration, currentTime) {
+                if (!acceleration || acceleration.x === null) return;
+
+                const deltaTime = this.lastMotionTimestamp ? (currentTime - this.lastMotionTimestamp) / 1000 : 0;
+                
+                if (deltaTime > 0 && deltaTime < 0.1) { // Ignore large time gaps
+                    // Apply low-pass filter to reduce noise
+                    const filteredAccel = {
+                        x: this.applyFilter(this.lastAcceleration.x, acceleration.x, 0.3),
+                        y: this.applyFilter(this.lastAcceleration.y, acceleration.y, 0.3),
+                        z: this.applyFilter(this.lastAcceleration.z, acceleration.z, 0.3)
+                    };
+
+                    // Apply threshold to ignore small accelerations (noise)
+                    const threshold = 0.5; // m/s²
+                    const accelMagnitude = Math.sqrt(
+                        filteredAccel.x * filteredAccel.x + 
+                        filteredAccel.y * filteredAccel.y + 
+                        filteredAccel.z * filteredAccel.z
+                    );
+
+                    if (accelMagnitude > threshold) {
+                        // Integrate acceleration to get velocity
+                        this.velocity.x += filteredAccel.x * deltaTime;
+                        this.velocity.y += filteredAccel.y * deltaTime;
+                        this.velocity.z += filteredAccel.z * deltaTime;
+                    } else {
+                        // Apply velocity decay when not accelerating (friction/air resistance)
+                        const decay = 0.95;
+                        this.velocity.x *= decay;
+                        this.velocity.y *= decay;
+                        this.velocity.z *= decay;
+                    }
+
+                    // Calculate total speed
+                    this.speed = Math.sqrt(
+                        this.velocity.x * this.velocity.x + 
+                        this.velocity.y * this.velocity.y + 
+                        this.velocity.z * this.velocity.z
+                    );
+
+                    // Add to history for smoothing
+                    this.speedHistory.push(this.speed);
+                    if (this.speedHistory.length > this.maxHistoryLength) {
+                        this.speedHistory.shift();
+                    }
+
+                    // Calculate smoothed speed
+                    const smoothedSpeed = this.speedHistory.reduce((a, b) => a + b, 0) / this.speedHistory.length;
+
+                    // Calculate speed in current direction (forward movement)
+                    const directionSpeed = this.calculateDirectionalSpeed();
+
+                    this.updateSpeedDisplay(smoothedSpeed, directionSpeed);
+                    this.lastAcceleration = filteredAccel;
+                }
+
+                this.lastMotionTimestamp = currentTime;
+            }
+
+            calculateDirectionalSpeed() {
+                if (!this.filteredAlpha) return 0;
+
+                // Convert device heading to radians
+                const headingRad = this.filteredAlpha * Math.PI / 180;
+
+                // Project velocity onto the heading direction
+                // Assuming Y-axis is forward direction in device coordinates
+                const forwardVelocity = -this.velocity.y * Math.cos(headingRad) + this.velocity.x * Math.sin(headingRad);
+                
+                return Math.abs(forwardVelocity);
+            }
+
+            updateSpeedDisplay(totalSpeed, directionalSpeed) {
+                // Convert m/s to km/h and mph
+                const speedKmh = totalSpeed * 3.6;
+                const speedMph = totalSpeed * 2.237;
+                const dirSpeedKmh = directionalSpeed * 3.6;
+                const dirSpeedMph = directionalSpeed * 2.237;
+
+                document.getElementById('totalSpeed').textContent = totalSpeed.toFixed(2);
+                document.getElementById('totalSpeedKmh').textContent = speedKmh.toFixed(1);
+                document.getElementById('totalSpeedMph').textContent = speedMph.toFixed(1);
+                document.getElementById('directionalSpeed').textContent = directionalSpeed.toFixed(2);
+                document.getElementById('directionalSpeedKmh').textContent = dirSpeedKmh.toFixed(1);
+                document.getElementById('directionalSpeedMph').textContent = dirSpeedMph.toFixed(1);
+            }
+
+            // Reset speed calculations
+            resetSpeed() {
+                this.velocity = { x: 0, y: 0, z: 0 };
+                this.speed = 0;
+                this.speedHistory = [];
+                this.lastAcceleration = { x: 0, y: 0, z: 0 };
+                document.getElementById('status').textContent = 'Speed reset!';
+                this.debug('Speed values reset');
+            }
+
+            applyFilter(filtered, raw, alpha) {
+                return filtered + alpha * (raw - filtered);
+            }
+
+            updateOrientationDisplay(alpha, beta, gamma) {
+                document.getElementById('alpha').textContent = alpha?.toFixed(1) || '--';
+                document.getElementById('beta').textContent = beta?.toFixed(1) || '--';
+                document.getElementById('gamma').textContent = gamma?.toFixed(1) || '--';
+            }
+
+            updateComputedValues(alpha, beta, gamma) {
+                // Compass heading (0° = North, 90° = East, 180° = South, 270° = West)
+                const heading = alpha;
+                
+                // Overall tilt angle
+                const tilt = Math.sqrt(beta * beta + gamma * gamma);
+                
+                // Cardinal direction
+                const direction = this.getCardinalDirection(heading);
+
+                document.getElementById('heading').textContent = heading?.toFixed(1) || '--';
+                document.getElementById('tilt').textContent = tilt?.toFixed(1) || '--';
+                document.getElementById('direction').textContent = direction;
+            }
+
+            updateCompass(alpha) {
+                const needle = document.querySelector('.needle');
+                if (needle && alpha !== null) {
+                    // Rotate needle to point north (opposite to device rotation)
+                    needle.style.transform = `translate(-50%, -100%) rotate(${-alpha}deg)`;
+                }
+            }
+
+            getCardinalDirection(heading) {
+                if (heading === null) return '--';
+                
+                const directions = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 
+                                  'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW'];
+                const index = Math.round(heading / 22.5) % 16;
+                return directions[index];
+            }
+        }
+
+        // Initialize the IMU processor when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            const processor = new IMUProcessor();
+        });
   </script>
  </body>
 </html>
