@@ -3,344 +3,217 @@
  <head>
   <script type="importmap">
    {
-  "imports": {
-    "app": "data:text/javascript;base64,Y2xhc3MgVmlkZW9TZW5zb3JSZWNvcmRlciB7CiAgICBjb25zdHJ1Y3RvcigpIHsKICAgICAgICB0aGlzLm1lZGlhUmVjb3JkZXIgPSBudWxsOwogICAgICAgIHRoaXMuc3RyZWFtID0gbnVsbDsKICAgICAgICB0aGlzLnJlY29yZGVkQ2h1bmtzID0gW107CiAgICAgICAgdGhpcy5zZW5zb3JEYXRhID0gW107CiAgICAgICAgdGhpcy5pc1JlY29yZGluZyA9IGZhbHNlOwogICAgICAgIHRoaXMuc3RhcnRUaW1lID0gbnVsbDsKICAgICAgICB0aGlzLnRpbWVySW50ZXJ2YWwgPSBudWxsOwogICAgICAgIAogICAgICAgIHRoaXMuaW5pdGlhbGl6ZUVsZW1lbnRzKCk7CiAgICAgICAgdGhpcy5iaW5kRXZlbnRzKCk7CiAgICAgICAgdGhpcy5pbml0aWFsaXplQ2FtZXJhKCk7CiAgICB9CiAgICAKICAgIGluaXRpYWxpemVFbGVtZW50cygpIHsKICAgICAgICB0aGlzLnZpZGVvUHJldmlldyA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCd2aWRlb1ByZXZpZXcnKTsKICAgICAgICB0aGlzLnN0YXJ0QnRuID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3N0YXJ0QnRuJyk7CiAgICAgICAgdGhpcy5zdG9wQnRuID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3N0b3BCdG4nKTsKICAgICAgICB0aGlzLmRvd25sb2FkQnRuID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2Rvd25sb2FkQnRuJyk7CiAgICAgICAgdGhpcy5zdGF0dXNUZXh0ID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3N0YXR1c1RleHQnKTsKICAgICAgICB0aGlzLnRpbWVyID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3RpbWVyJyk7CiAgICAgICAgdGhpcy5hY2NlbERhdGEgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnYWNjZWxEYXRhJyk7CiAgICAgICAgdGhpcy5neXJvRGF0YSA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdneXJvRGF0YScpOwogICAgICAgIHRoaXMucmVxdWVzdFBlcm1pc3Npb25zQnRuID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3JlcXVlc3RQZXJtaXNzaW9ucycpOwogICAgfQogICAgCiAgICBiaW5kRXZlbnRzKCkgewogICAgICAgIHRoaXMuc3RhcnRCdG4uYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCAoKSA9PiB0aGlzLnN0YXJ0UmVjb3JkaW5nKCkpOwogICAgICAgIHRoaXMuc3RvcEJ0bi5hZGRFdmVudExpc3RlbmVyKCdjbGljaycsICgpID0+IHRoaXMuc3RvcFJlY29yZGluZygpKTsKICAgICAgICB0aGlzLmRvd25sb2FkQnRuLmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJywgKCkgPT4gdGhpcy5kb3dubG9hZERhdGEoKSk7CiAgICAgICAgdGhpcy5yZXF1ZXN0UGVybWlzc2lvbnNCdG4uYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCAoKSA9PiB0aGlzLnJlcXVlc3RQZXJtaXNzaW9ucygpKTsKICAgIH0KICAgIAogICAgYXN5bmMgaW5pdGlhbGl6ZUNhbWVyYSgpIHsKICAgICAgICB0cnkgewogICAgICAgICAgICB0aGlzLnN0cmVhbSA9IGF3YWl0IG5hdmlnYXRvci5tZWRpYURldmljZXMuZ2V0VXNlck1lZGlhKHsKICAgICAgICAgICAgICAgIHZpZGVvOiB7IAogICAgICAgICAgICAgICAgICAgIGZhY2luZ01vZGU6ICdlbnZpcm9ubWVudCcsCiAgICAgICAgICAgICAgICAgICAgd2lkdGg6IHsgaWRlYWw6IDEyODAgfSwKICAgICAgICAgICAgICAgICAgICBoZWlnaHQ6IHsgaWRlYWw6IDcyMCB9CiAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgYXVkaW86IHRydWUKICAgICAgICAgICAgfSk7CiAgICAgICAgICAgIHRoaXMudmlkZW9QcmV2aWV3LnNyY09iamVjdCA9IHRoaXMuc3RyZWFtOwogICAgICAgICAgICB0aGlzLnN0YXR1c1RleHQudGV4dENvbnRlbnQgPSAnQ2FtZXJhIHJlYWR5JzsKICAgICAgICB9IGNhdGNoIChlcnJvcikgewogICAgICAgICAgICBjb25zb2xlLmVycm9yKCdFcnJvciBhY2Nlc3NpbmcgY2FtZXJhOicsIGVycm9yKTsKICAgICAgICAgICAgdGhpcy5zdGF0dXNUZXh0LnRleHRDb250ZW50ID0gJ0NhbWVyYSBhY2Nlc3MgZGVuaWVkJzsKICAgICAgICB9CiAgICB9CiAgICAKICAgIGFzeW5jIHJlcXVlc3RQZXJtaXNzaW9ucygpIHsKICAgICAgICB0cnkgewogICAgICAgICAgICAvLyBSZXF1ZXN0IGRldmljZSBtb3Rpb24gcGVybWlzc2lvbiAoaU9TIDEzKykKICAgICAgICAgICAgaWYgKHR5cGVvZiBEZXZpY2VNb3Rpb25FdmVudCAhPT0gJ3VuZGVmaW5lZCcgJiYgdHlwZW9mIERldmljZU1vdGlvbkV2ZW50LnJlcXVlc3RQZXJtaXNzaW9uID09PSAnZnVuY3Rpb24nKSB7CiAgICAgICAgICAgICAgICBjb25zdCBwZXJtaXNzaW9uID0gYXdhaXQgRGV2aWNlTW90aW9uRXZlbnQucmVxdWVzdFBlcm1pc3Npb24oKTsKICAgICAgICAgICAgICAgIGlmIChwZXJtaXNzaW9uID09PSAnZ3JhbnRlZCcpIHsKICAgICAgICAgICAgICAgICAgICB0aGlzLnN0YXJ0U2Vuc29yTGlzdGVuaW5nKCk7CiAgICAgICAgICAgICAgICAgICAgdGhpcy5zdGF0dXNUZXh0LnRleHRDb250ZW50ID0gJ1NlbnNvciBwZXJtaXNzaW9ucyBncmFudGVkJzsKICAgICAgICAgICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICAgICAgICAgdGhpcy5zdGF0dXNUZXh0LnRleHRDb250ZW50ID0gJ1NlbnNvciBwZXJtaXNzaW9ucyBkZW5pZWQnOwogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAgICAgLy8gRm9yIG5vbi1pT1MgZGV2aWNlcyBvciBvbGRlciBpT1MgdmVyc2lvbnMKICAgICAgICAgICAgICAgIHRoaXMuc3RhcnRTZW5zb3JMaXN0ZW5pbmcoKTsKICAgICAgICAgICAgICAgIHRoaXMuc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9ICdTZW5zb3JzIGF2YWlsYWJsZSc7CiAgICAgICAgICAgIH0KICAgICAgICB9IGNhdGNoIChlcnJvcikgewogICAgICAgICAgICBjb25zb2xlLmVycm9yKCdFcnJvciByZXF1ZXN0aW5nIHBlcm1pc3Npb25zOicsIGVycm9yKTsKICAgICAgICAgICAgdGhpcy5zdGF0dXNUZXh0LnRleHRDb250ZW50ID0gJ0Vycm9yIHJlcXVlc3RpbmcgcGVybWlzc2lvbnMnOwogICAgICAgIH0KICAgIH0KICAgIAogICAgc3RhcnRTZW5zb3JMaXN0ZW5pbmcoKSB7CiAgICAgICAgLy8gTGlzdGVuIGZvciBkZXZpY2UgbW90aW9uIGV2ZW50cwogICAgICAgIHdpbmRvdy5hZGRFdmVudExpc3RlbmVyKCdkZXZpY2Vtb3Rpb24nLCAoZXZlbnQpID0+IHsKICAgICAgICAgICAgaWYgKGV2ZW50LmFjY2VsZXJhdGlvbkluY2x1ZGluZ0dyYXZpdHkpIHsKICAgICAgICAgICAgICAgIGNvbnN0IGFjY2VsID0gZXZlbnQuYWNjZWxlcmF0aW9uSW5jbHVkaW5nR3Jhdml0eTsKICAgICAgICAgICAgICAgIHRoaXMuYWNjZWxEYXRhLnRleHRDb250ZW50ID0gYHg6ICR7YWNjZWwueD8udG9GaXhlZCgyKSB8fCAwfSwgeTogJHthY2NlbC55Py50b0ZpeGVkKDIpIHx8IDB9LCB6OiAke2FjY2VsLno/LnRvRml4ZWQoMikgfHwgMH1gOwogICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICBpZiAoZXZlbnQucm90YXRpb25SYXRlKSB7CiAgICAgICAgICAgICAgICBjb25zdCBneXJvID0gZXZlbnQucm90YXRpb25SYXRlOwogICAgICAgICAgICAgICAgdGhpcy5neXJvRGF0YS50ZXh0Q29udGVudCA9IGB4OiAke2d5cm8uYWxwaGE/LnRvRml4ZWQoMikgfHwgMH0sIHk6ICR7Z3lyby5iZXRhPy50b0ZpeGVkKDIpIHx8IDB9LCB6OiAke2d5cm8uZ2FtbWE/LnRvRml4ZWQoMikgfHwgMH1gOwogICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICAvLyBSZWNvcmQgc2Vuc29yIGRhdGEgaWYgcmVjb3JkaW5nCiAgICAgICAgICAgIGlmICh0aGlzLmlzUmVjb3JkaW5nKSB7CiAgICAgICAgICAgICAgICBjb25zdCB0aW1lc3RhbXAgPSBEYXRlLm5vdygpIC0gdGhpcy5zdGFydFRpbWU7CiAgICAgICAgICAgICAgICB0aGlzLnNlbnNvckRhdGEucHVzaCh7CiAgICAgICAgICAgICAgICAgICAgdGltZXN0YW1wLAogICAgICAgICAgICAgICAgICAgIGFjY2VsZXJvbWV0ZXI6IGV2ZW50LmFjY2VsZXJhdGlvbkluY2x1ZGluZ0dyYXZpdHkgPyB7CiAgICAgICAgICAgICAgICAgICAgICAgIHg6IGV2ZW50LmFjY2VsZXJhdGlvbkluY2x1ZGluZ0dyYXZpdHkueCB8fCAwLAogICAgICAgICAgICAgICAgICAgICAgICB5OiBldmVudC5hY2NlbGVyYXRpb25JbmNsdWRpbmdHcmF2aXR5LnkgfHwgMCwKICAgICAgICAgICAgICAgICAgICAgICAgejogZXZlbnQuYWNjZWxlcmF0aW9uSW5jbHVkaW5nR3Jhdml0eS56IHx8IDAKICAgICAgICAgICAgICAgICAgICB9IDogbnVsbCwKICAgICAgICAgICAgICAgICAgICBneXJvc2NvcGU6IGV2ZW50LnJvdGF0aW9uUmF0ZSA/IHsKICAgICAgICAgICAgICAgICAgICAgICAgYWxwaGE6IGV2ZW50LnJvdGF0aW9uUmF0ZS5hbHBoYSB8fCAwLAogICAgICAgICAgICAgICAgICAgICAgICBiZXRhOiBldmVudC5yb3RhdGlvblJhdGUuYmV0YSB8fCAwLAogICAgICAgICAgICAgICAgICAgICAgICBnYW1tYTogZXZlbnQucm90YXRpb25SYXRlLmdhbW1hIHx8IDAKICAgICAgICAgICAgICAgICAgICB9IDogbnVsbAogICAgICAgICAgICAgICAgfSk7CiAgICAgICAgICAgIH0KICAgICAgICB9KTsKICAgIH0KICAgIAogICAgYXN5bmMgc3RhcnRSZWNvcmRpbmcoKSB7CiAgICAgICAgaWYgKCF0aGlzLnN0cmVhbSkgewogICAgICAgICAgICB0aGlzLnN0YXR1c1RleHQudGV4dENvbnRlbnQgPSAnQ2FtZXJhIG5vdCBhdmFpbGFibGUnOwogICAgICAgICAgICByZXR1cm47CiAgICAgICAgfQogICAgICAgIAogICAgICAgIHRyeSB7CiAgICAgICAgICAgIC8vIENsZWFyIHByZXZpb3VzIGRhdGEKICAgICAgICAgICAgdGhpcy5yZWNvcmRlZENodW5rcyA9IFtdOwogICAgICAgICAgICB0aGlzLnNlbnNvckRhdGEgPSBbXTsKICAgICAgICAgICAgCiAgICAgICAgICAgIC8vIFNldHVwIG1lZGlhIHJlY29yZGVyCiAgICAgICAgICAgIHRoaXMubWVkaWFSZWNvcmRlciA9IG5ldyBNZWRpYVJlY29yZGVyKHRoaXMuc3RyZWFtLCB7CiAgICAgICAgICAgICAgICBtaW1lVHlwZTogJ3ZpZGVvL21wNDsgY29kZWNzPWF2YzEuNDJFMDFFLG1wNGEuNDAuMicKICAgICAgICAgICAgfSk7CiAgICAgICAgICAgIAogICAgICAgICAgICB0aGlzLm1lZGlhUmVjb3JkZXIub25kYXRhYXZhaWxhYmxlID0gKGV2ZW50KSA9PiB7CiAgICAgICAgICAgICAgICBpZiAoZXZlbnQuZGF0YS5zaXplID4gMCkgewogICAgICAgICAgICAgICAgICAgIHRoaXMucmVjb3JkZWRDaHVua3MucHVzaChldmVudC5kYXRhKTsKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfTsKICAgICAgICAgICAgCiAgICAgICAgICAgIHRoaXMubWVkaWFSZWNvcmRlci5vbnN0b3AgPSAoKSA9PiB7CiAgICAgICAgICAgICAgICB0aGlzLmRvd25sb2FkQnRuLmRpc2FibGVkID0gZmFsc2U7CiAgICAgICAgICAgIH07CiAgICAgICAgICAgIAogICAgICAgICAgICAvLyBTdGFydCByZWNvcmRpbmcKICAgICAgICAgICAgdGhpcy5tZWRpYVJlY29yZGVyLnN0YXJ0KDEwMCk7IC8vIFJlY29yZCBpbiAxMDBtcyBjaHVua3MKICAgICAgICAgICAgdGhpcy5pc1JlY29yZGluZyA9IHRydWU7CiAgICAgICAgICAgIHRoaXMuc3RhcnRUaW1lID0gRGF0ZS5ub3coKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIC8vIFVwZGF0ZSBVSQogICAgICAgICAgICB0aGlzLnN0YXJ0QnRuLmRpc2FibGVkID0gdHJ1ZTsKICAgICAgICAgICAgdGhpcy5zdG9wQnRuLmRpc2FibGVkID0gZmFsc2U7CiAgICAgICAgICAgIHRoaXMuZG93bmxvYWRCdG4uZGlzYWJsZWQgPSB0cnVlOwogICAgICAgICAgICB0aGlzLnN0YXR1c1RleHQudGV4dENvbnRlbnQgPSAnUmVjb3JkaW5nLi4uJzsKICAgICAgICAgICAgCiAgICAgICAgICAgIC8vIFN0YXJ0IHRpbWVyCiAgICAgICAgICAgIHRoaXMuc3RhcnRUaW1lcigpOwogICAgICAgICAgICAKICAgICAgICB9IGNhdGNoIChlcnJvcikgewogICAgICAgICAgICBjb25zb2xlLmVycm9yKCdFcnJvciBzdGFydGluZyByZWNvcmRpbmc6JywgZXJyb3IpOwogICAgICAgICAgICB0aGlzLnN0YXR1c1RleHQudGV4dENvbnRlbnQgPSAnRXJyb3Igc3RhcnRpbmcgcmVjb3JkaW5nJzsKICAgICAgICB9CiAgICB9CiAgICAKICAgIHN0b3BSZWNvcmRpbmcoKSB7CiAgICAgICAgaWYgKHRoaXMubWVkaWFSZWNvcmRlciAmJiB0aGlzLmlzUmVjb3JkaW5nKSB7CiAgICAgICAgICAgIHRoaXMubWVkaWFSZWNvcmRlci5zdG9wKCk7CiAgICAgICAgICAgIHRoaXMuaXNSZWNvcmRpbmcgPSBmYWxzZTsKICAgICAgICAgICAgCiAgICAgICAgICAgIC8vIFVwZGF0ZSBVSQogICAgICAgICAgICB0aGlzLnN0YXJ0QnRuLmRpc2FibGVkID0gZmFsc2U7CiAgICAgICAgICAgIHRoaXMuc3RvcEJ0bi5kaXNhYmxlZCA9IHRydWU7CiAgICAgICAgICAgIHRoaXMuc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9ICdSZWNvcmRpbmcgc3RvcHBlZCc7CiAgICAgICAgICAgIAogICAgICAgICAgICAvLyBTdG9wIHRpbWVyCiAgICAgICAgICAgIHRoaXMuc3RvcFRpbWVyKCk7CiAgICAgICAgfQogICAgfQogICAgCiAgICBzdGFydFRpbWVyKCkgewogICAgICAgIHRoaXMudGltZXJJbnRlcnZhbCA9IHNldEludGVydmFsKCgpID0+IHsKICAgICAgICAgICAgaWYgKHRoaXMuc3RhcnRUaW1lKSB7CiAgICAgICAgICAgICAgICBjb25zdCBlbGFwc2VkID0gRGF0ZS5ub3coKSAtIHRoaXMuc3RhcnRUaW1lOwogICAgICAgICAgICAgICAgY29uc3QgbWludXRlcyA9IE1hdGguZmxvb3IoZWxhcHNlZCAvIDYwMDAwKTsKICAgICAgICAgICAgICAgIGNvbnN0IHNlY29uZHMgPSBNYXRoLmZsb29yKChlbGFwc2VkICUgNjAwMDApIC8gMTAwMCk7CiAgICAgICAgICAgICAgICB0aGlzLnRpbWVyLnRleHRDb250ZW50ID0gYCR7bWludXRlcy50b1N0cmluZygpLnBhZFN0YXJ0KDIsICcwJyl9OiR7c2Vjb25kcy50b1N0cmluZygpLnBhZFN0YXJ0KDIsICcwJyl9YDsKICAgICAgICAgICAgfQogICAgICAgIH0sIDEwMDApOwogICAgfQogICAgCiAgICBzdG9wVGltZXIoKSB7CiAgICAgICAgaWYgKHRoaXMudGltZXJJbnRlcnZhbCkgewogICAgICAgICAgICBjbGVhckludGVydmFsKHRoaXMudGltZXJJbnRlcnZhbCk7CiAgICAgICAgICAgIHRoaXMudGltZXJJbnRlcnZhbCA9IG51bGw7CiAgICAgICAgfQogICAgfQogICAgCiAgICBhc3luYyBkb3dubG9hZERhdGEoKSB7CiAgICAgICAgaWYgKHRoaXMucmVjb3JkZWRDaHVua3MubGVuZ3RoID09PSAwKSB7CiAgICAgICAgICAgIHRoaXMuc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9ICdObyByZWNvcmRpbmcgdG8gZG93bmxvYWQnOwogICAgICAgICAgICByZXR1cm47CiAgICAgICAgfQogICAgICAgIAogICAgICAgIHRyeSB7CiAgICAgICAgICAgIC8vIENyZWF0ZSB0aW1lc3RhbXAgZm9yIGZpbGVuYW1lcwogICAgICAgICAgICBjb25zdCB0aW1lc3RhbXAgPSBuZXcgRGF0ZSgpLnRvSVNPU3RyaW5nKCkucmVwbGFjZSgvWzouXS9nLCAnLScpLnNwbGl0KCdUJylbMF0gKyAnXycgKyAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICBuZXcgRGF0ZSgpLnRvSVNPU3RyaW5nKCkucmVwbGFjZSgvWzouXS9nLCAnLScpLnNwbGl0KCdUJylbMV0uc3BsaXQoJy4nKVswXTsKICAgICAgICAgICAgCiAgICAgICAgICAgIC8vIENyZWF0ZSB2aWRlbyBibG9iCiAgICAgICAgICAgIGNvbnN0IHZpZGVvQmxvYiA9IG5ldyBCbG9iKHRoaXMucmVjb3JkZWRDaHVua3MsIHsgdHlwZTogJ3ZpZGVvL21wNCcgfSk7CiAgICAgICAgICAgIAogICAgICAgICAgICAvLyBDcmVhdGUgc2Vuc29yIGRhdGEgSlNPTgogICAgICAgICAgICBjb25zdCBzZW5zb3JEYXRhT2JqID0gewogICAgICAgICAgICAgICAgcmVjb3JkaW5nSW5mbzogewogICAgICAgICAgICAgICAgICAgIHN0YXJ0VGltZTogbmV3IERhdGUodGhpcy5zdGFydFRpbWUpLnRvSVNPU3RyaW5nKCksCiAgICAgICAgICAgICAgICAgICAgZHVyYXRpb246IERhdGUubm93KCkgLSB0aGlzLnN0YXJ0VGltZSwKICAgICAgICAgICAgICAgICAgICBzYW1wbGVDb3VudDogdGhpcy5zZW5zb3JEYXRhLmxlbmd0aAogICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgIHNlbnNvckRhdGE6IHRoaXMuc2Vuc29yRGF0YQogICAgICAgICAgICB9OwogICAgICAgICAgICAKICAgICAgICAgICAgY29uc3Qgc2Vuc29yQmxvYiA9IG5ldyBCbG9iKFtKU09OLnN0cmluZ2lmeShzZW5zb3JEYXRhT2JqLCBudWxsLCAyKV0sIHsgCiAgICAgICAgICAgICAgICB0eXBlOiAnYXBwbGljYXRpb24vanNvbicgCiAgICAgICAgICAgIH0pOwogICAgICAgICAgICAKICAgICAgICAgICAgdGhpcy5zdGF0dXNUZXh0LnRleHRDb250ZW50ID0gJ1ByZXBhcmluZyBkb3dubG9hZHMuLi4nOwogICAgICAgICAgICAKICAgICAgICAgICAgLy8gRG93bmxvYWQgdmlkZW8gZmlsZQogICAgICAgICAgICBhd2FpdCB0aGlzLmRvd25sb2FkRmlsZSh2aWRlb0Jsb2IsIGByZWNvcmRpbmdfJHt0aW1lc3RhbXB9Lm1wNGApOwogICAgICAgICAgICAKICAgICAgICAgICAgLy8gV2FpdCBhIGJpdCBiZWZvcmUgZG93bmxvYWRpbmcgdGhlIHNlY29uZCBmaWxlIChoZWxwcyB3aXRoIGlPUyBTYWZhcmkpCiAgICAgICAgICAgIGF3YWl0IG5ldyBQcm9taXNlKHJlc29sdmUgPT4gc2V0VGltZW91dChyZXNvbHZlLCA1MDApKTsKICAgICAgICAgICAgCiAgICAgICAgICAgIC8vIERvd25sb2FkIHNlbnNvciBkYXRhCiAgICAgICAgICAgIGF3YWl0IHRoaXMuZG93bmxvYWRGaWxlKHNlbnNvckJsb2IsIGBzZW5zb3JfZGF0YV8ke3RpbWVzdGFtcH0uanNvbmApOwogICAgICAgICAgICAKICAgICAgICAgICAgdGhpcy5zdGF0dXNUZXh0LnRleHRDb250ZW50ID0gJ0JvdGggZmlsZXMgZG93bmxvYWRlZCBzdWNjZXNzZnVsbHkhJzsKICAgICAgICAgICAgCiAgICAgICAgfSBjYXRjaCAoZXJyb3IpIHsKICAgICAgICAgICAgY29uc29sZS5lcnJvcignRXJyb3IgZG93bmxvYWRpbmcgZmlsZXM6JywgZXJyb3IpOwogICAgICAgICAgICB0aGlzLnN0YXR1c1RleHQudGV4dENvbnRlbnQgPSAnRXJyb3IgZG93bmxvYWRpbmcgZmlsZXMnOwogICAgICAgIH0KICAgIH0KICAgIAogICAgZG93bmxvYWRGaWxlKGJsb2IsIGZpbGVuYW1lKSB7CiAgICAgICAgcmV0dXJuIG5ldyBQcm9taXNlKChyZXNvbHZlKSA9PiB7CiAgICAgICAgICAgIGNvbnN0IHVybCA9IFVSTC5jcmVhdGVPYmplY3RVUkwoYmxvYik7CiAgICAgICAgICAgIGNvbnN0IGxpbmsgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdhJyk7CiAgICAgICAgICAgIGxpbmsuaHJlZiA9IHVybDsKICAgICAgICAgICAgbGluay5kb3dubG9hZCA9IGZpbGVuYW1lOwogICAgICAgICAgICBsaW5rLnN0eWxlLmRpc3BsYXkgPSAnbm9uZSc7CiAgICAgICAgICAgIAogICAgICAgICAgICAvLyBBZGQgdG8gRE9NLCBjbGljaywgdGhlbiByZW1vdmUKICAgICAgICAgICAgZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChsaW5rKTsKICAgICAgICAgICAgbGluay5jbGljaygpOwogICAgICAgICAgICBkb2N1bWVudC5ib2R5LnJlbW92ZUNoaWxkKGxpbmspOwogICAgICAgICAgICAKICAgICAgICAgICAgLy8gQ2xlYW4gdXAgVVJMIGFmdGVyIGEgZGVsYXkgdG8gZW5zdXJlIGRvd25sb2FkIHN0YXJ0cwogICAgICAgICAgICBzZXRUaW1lb3V0KCgpID0+IHsKICAgICAgICAgICAgICAgIFVSTC5yZXZva2VPYmplY3RVUkwodXJsKTsKICAgICAgICAgICAgICAgIHJlc29sdmUoKTsKICAgICAgICAgICAgfSwgMTAwMCk7CiAgICAgICAgfSk7CiAgICB9Cn0KCi8vIEluaXRpYWxpemUgdGhlIGFwcCB3aGVuIHRoZSBwYWdlIGxvYWRzCmRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoJ0RPTUNvbnRlbnRMb2FkZWQnLCAoKSA9PiB7CiAgICBuZXcgVmlkZW9TZW5zb3JSZWNvcmRlcigpOwp9KTsKCi8vIEhhbmRsZSBwYWdlIHZpc2liaWxpdHkgY2hhbmdlcyAoaW1wb3J0YW50IGZvciBpT1MpCmRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoJ3Zpc2liaWxpdHljaGFuZ2UnLCAoKSA9PiB7CiAgICBpZiAoZG9jdW1lbnQuaGlkZGVuKSB7CiAgICAgICAgLy8gUGFnZSBpcyBoaWRkZW4sIHlvdSBtaWdodCB3YW50IHRvIHBhdXNlIHJlY29yZGluZyBvciBoYW5kbGUgYWNjb3JkaW5nbHkKICAgICAgICBjb25zb2xlLmxvZygnUGFnZSBoaWRkZW4nKTsKICAgIH0gZWxzZSB7CiAgICAgICAgLy8gUGFnZSBpcyB2aXNpYmxlIGFnYWluCiAgICAgICAgY29uc29sZS5sb2coJ1BhZ2UgdmlzaWJsZScpOwogICAgfQp9KTsK"
-  }
+  "imports": {}
 }
   </script>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
-   Video + Sensor Recorder
+   iPhone IMU to Direction &amp; Rotation
   </title>
-  <link href="data:text/css;base64,KiB7CiAgICBtYXJnaW46IDA7CiAgICBwYWRkaW5nOiAwOwogICAgYm94LXNpemluZzogYm9yZGVyLWJveDsKfQoKYm9keSB7CiAgICBmb250LWZhbWlseTogLWFwcGxlLXN5c3RlbSwgQmxpbmtNYWNTeXN0ZW1Gb250LCAnU2Vnb2UgVUknLCBSb2JvdG8sIHNhbnMtc2VyaWY7CiAgICBiYWNrZ3JvdW5kOiAjZjVmNWY1OwogICAgcGFkZGluZzogMjBweDsKfQoKLmNvbnRhaW5lciB7CiAgICBtYXgtd2lkdGg6IDYwMHB4OwogICAgbWFyZ2luOiAwIGF1dG87CiAgICBiYWNrZ3JvdW5kOiB3aGl0ZTsKICAgIGJvcmRlci1yYWRpdXM6IDEycHg7CiAgICBwYWRkaW5nOiAyMHB4OwogICAgYm94LXNoYWRvdzogMCAycHggMTBweCByZ2JhKDAsMCwwLDAuMSk7Cn0KCmgxIHsKICAgIHRleHQtYWxpZ246IGNlbnRlcjsKICAgIGNvbG9yOiAjMzMzOwogICAgbWFyZ2luLWJvdHRvbTogMjBweDsKfQoKLnZpZGVvLWNvbnRhaW5lciB7CiAgICBwb3NpdGlvbjogcmVsYXRpdmU7CiAgICB3aWR0aDogMTAwJTsKICAgIG1heC13aWR0aDogNDAwcHg7CiAgICBtYXJnaW46IDAgYXV0byAyMHB4OwogICAgYm9yZGVyLXJhZGl1czogOHB4OwogICAgb3ZlcmZsb3c6IGhpZGRlbjsKICAgIGJhY2tncm91bmQ6ICMwMDA7Cn0KCiN2aWRlb1ByZXZpZXcgewogICAgd2lkdGg6IDEwMCU7CiAgICBoZWlnaHQ6IGF1dG87CiAgICBkaXNwbGF5OiBibG9jazsKfQoKLmNvbnRyb2xzIHsKICAgIGRpc3BsYXk6IGZsZXg7CiAgICBnYXA6IDEwcHg7CiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjsKICAgIG1hcmdpbi1ib3R0b206IDIwcHg7CiAgICBmbGV4LXdyYXA6IHdyYXA7Cn0KCi5idG4gewogICAgcGFkZGluZzogMTJweCAyNHB4OwogICAgYm9yZGVyOiBub25lOwogICAgYm9yZGVyLXJhZGl1czogOHB4OwogICAgZm9udC1zaXplOiAxNnB4OwogICAgZm9udC13ZWlnaHQ6IDYwMDsKICAgIGN1cnNvcjogcG9pbnRlcjsKICAgIHRyYW5zaXRpb246IGFsbCAwLjJzOwogICAgbWluLXdpZHRoOiAxMjBweDsKfQoKLmJ0bi1zdGFydCB7CiAgICBiYWNrZ3JvdW5kOiAjNENBRjUwOwogICAgY29sb3I6IHdoaXRlOwp9CgouYnRuLXN0YXJ0OmhvdmVyOm5vdCg6ZGlzYWJsZWQpIHsKICAgIGJhY2tncm91bmQ6ICM0NWEwNDk7Cn0KCi5idG4tc3RvcCB7CiAgICBiYWNrZ3JvdW5kOiAjZjQ0MzM2OwogICAgY29sb3I6IHdoaXRlOwp9CgouYnRuLXN0b3A6aG92ZXI6bm90KDpkaXNhYmxlZCkgewogICAgYmFja2dyb3VuZDogI2RhMTkwYjsKfQoKLmJ0bi1kb3dubG9hZCB7CiAgICBiYWNrZ3JvdW5kOiAjMjE5NkYzOwogICAgY29sb3I6IHdoaXRlOwp9CgouYnRuLWRvd25sb2FkOmhvdmVyOm5vdCg6ZGlzYWJsZWQpIHsKICAgIGJhY2tncm91bmQ6ICMwYjdkZGE7Cn0KCi5idG4tc2Vjb25kYXJ5IHsKICAgIGJhY2tncm91bmQ6ICNmZjk4MDA7CiAgICBjb2xvcjogd2hpdGU7Cn0KCi5idG4tc2Vjb25kYXJ5OmhvdmVyOm5vdCg6ZGlzYWJsZWQpIHsKICAgIGJhY2tncm91bmQ6ICNlNjg5MDA7Cn0KCi5idG46ZGlzYWJsZWQgewogICAgb3BhY2l0eTogMC41OwogICAgY3Vyc29yOiBub3QtYWxsb3dlZDsKfQoKLnN0YXR1cyB7CiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7CiAgICBtYXJnaW4tYm90dG9tOiAyMHB4Owp9Cgojc3RhdHVzVGV4dCB7CiAgICBmb250LXNpemU6IDE2cHg7CiAgICBjb2xvcjogIzY2NjsKICAgIG1hcmdpbi1ib3R0b206IDVweDsKfQoKI3RpbWVyIHsKICAgIGZvbnQtc2l6ZTogMjRweDsKICAgIGZvbnQtd2VpZ2h0OiBib2xkOwogICAgY29sb3I6ICMzMzM7CiAgICBmb250LWZhbWlseTogJ0NvdXJpZXIgTmV3JywgbW9ub3NwYWNlOwp9Cgouc2Vuc29yLWRhdGEgewogICAgYmFja2dyb3VuZDogI2Y4ZjlmYTsKICAgIHBhZGRpbmc6IDE1cHg7CiAgICBib3JkZXItcmFkaXVzOiA4cHg7CiAgICBtYXJnaW4tYm90dG9tOiAyMHB4Owp9Cgouc2Vuc29yLWRhdGEgaDMgewogICAgbWFyZ2luLWJvdHRvbTogMTBweDsKICAgIGNvbG9yOiAjMzMzOwp9Cgouc2Vuc29yLXJvdyB7CiAgICBkaXNwbGF5OiBmbGV4OwogICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuOwogICAgbWFyZ2luLWJvdHRvbTogOHB4OwogICAgZm9udC1mYW1pbHk6ICdDb3VyaWVyIE5ldycsIG1vbm9zcGFjZTsKICAgIGZvbnQtc2l6ZTogMTRweDsKfQoKLnNlbnNvci1yb3cgc3BhbjpmaXJzdC1jaGlsZCB7CiAgICBmb250LXdlaWdodDogYm9sZDsKICAgIGNvbG9yOiAjNTU1Owp9CgoucGVybWlzc2lvbnMgewogICAgdGV4dC1hbGlnbjogY2VudGVyOwp9CgpAbWVkaWEgKG1heC13aWR0aDogNDgwcHgpIHsKICAgIC5jb250YWluZXIgewogICAgICAgIHBhZGRpbmc6IDE1cHg7CiAgICB9CiAgICAKICAgIC5jb250cm9scyB7CiAgICAgICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjsKICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyOwogICAgfQogICAgCiAgICAuYnRuIHsKICAgICAgICB3aWR0aDogMTAwJTsKICAgICAgICBtYXgtd2lkdGg6IDIwMHB4OwogICAgfQp9Cg==" rel="stylesheet"/>
+  <link href="data:text/css;base64,KiB7CiAgICBtYXJnaW46IDA7CiAgICBwYWRkaW5nOiAwOwogICAgYm94LXNpemluZzogYm9yZGVyLWJveDsKfQoKYm9keSB7CiAgICBmb250LWZhbWlseTogLWFwcGxlLXN5c3RlbSwgQmxpbmtNYWNTeXN0ZW1Gb250LCAnU2Vnb2UgVUknLCBSb2JvdG8sIHNhbnMtc2VyaWY7CiAgICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoMTM1ZGVnLCAjNjY3ZWVhIDAlLCAjNzY0YmEyIDEwMCUpOwogICAgbWluLWhlaWdodDogMTAwdmg7CiAgICBjb2xvcjogd2hpdGU7Cn0KCi5jb250YWluZXIgewogICAgbWF4LXdpZHRoOiAxMDAwcHg7CiAgICBtYXJnaW46IDAgYXV0bzsKICAgIHBhZGRpbmc6IDIwcHg7Cn0KCmgxIHsKICAgIHRleHQtYWxpZ246IGNlbnRlcjsKICAgIG1hcmdpbi1ib3R0b206IDMwcHg7CiAgICBmb250LXNpemU6IDIuNWVtOwogICAgdGV4dC1zaGFkb3c6IDJweCAycHggNHB4IHJnYmEoMCwwLDAsMC4zKTsKfQoKI3JlcXVlc3RQZXJtaXNzaW9uIHsKICAgIGRpc3BsYXk6IGJsb2NrOwogICAgbWFyZ2luOiAwIGF1dG8gMzBweDsKICAgIHBhZGRpbmc6IDE1cHggMzBweDsKICAgIGZvbnQtc2l6ZTogMThweDsKICAgIGJhY2tncm91bmQ6ICM0Q0FGNTA7CiAgICBjb2xvcjogd2hpdGU7CiAgICBib3JkZXI6IG5vbmU7CiAgICBib3JkZXItcmFkaXVzOiAyNXB4OwogICAgY3Vyc29yOiBwb2ludGVyOwogICAgdHJhbnNpdGlvbjogYWxsIDAuM3MgZWFzZTsKfQoKI3JlcXVlc3RQZXJtaXNzaW9uOmhvdmVyIHsKICAgIGJhY2tncm91bmQ6ICM0NWEwNDk7CiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoLTJweCk7Cn0KCi5zZW5zb3ItZGF0YSB7CiAgICBkaXNwbGF5OiBncmlkOwogICAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiByZXBlYXQoYXV0by1maXQsIG1pbm1heCgyODBweCwgMWZyKSk7CiAgICBnYXA6IDIwcHg7CiAgICBtYXJnaW4tYm90dG9tOiAzMHB4Owp9Cgoub3JpZW50YXRpb24tZGF0YSwgLm1vdGlvbi1kYXRhLCAuY29tcHV0ZWQtZGF0YSwgLnNwZWVkLWRhdGEgewogICAgYmFja2dyb3VuZDogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjEpOwogICAgYmFja2Ryb3AtZmlsdGVyOiBibHVyKDEwcHgpOwogICAgYm9yZGVyLXJhZGl1czogMTVweDsKICAgIHBhZGRpbmc6IDIwcHg7CiAgICBib3JkZXI6IDFweCBzb2xpZCByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMik7Cn0KCi5zcGVlZC1kYXRhIHsKICAgIGJhY2tncm91bmQ6IHJnYmEoMjU1LCAyMTUsIDAsIDAuMTUpOwogICAgYm9yZGVyOiAxcHggc29saWQgcmdiYSgyNTUsIDIxNSwgMCwgMC4zKTsKfQoKaDIgewogICAgbWFyZ2luLWJvdHRvbTogMTVweDsKICAgIGNvbG9yOiAjRkZENzAwOwogICAgZm9udC1zaXplOiAxLjNlbTsKfQoKLnNwZWVkLWRhdGEgaDIgewogICAgY29sb3I6ICNGRkE1MDA7Cn0KCi5kYXRhLXJvdyB7CiAgICBkaXNwbGF5OiBmbGV4OwogICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuOwogICAgbWFyZ2luLWJvdHRvbTogMTBweDsKICAgIHBhZGRpbmc6IDhweCAwOwogICAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4xKTsKfQoKLmRhdGEtcm93Omxhc3QtY2hpbGQgewogICAgYm9yZGVyLWJvdHRvbTogbm9uZTsKfQoKLnJlc2V0LWJ0biB7CiAgICB3aWR0aDogMTAwJTsKICAgIHBhZGRpbmc6IDEwcHg7CiAgICBtYXJnaW4tdG9wOiAxNXB4OwogICAgYmFja2dyb3VuZDogI2ZmNmI2YjsKICAgIGNvbG9yOiB3aGl0ZTsKICAgIGJvcmRlcjogbm9uZTsKICAgIGJvcmRlci1yYWRpdXM6IDhweDsKICAgIGN1cnNvcjogcG9pbnRlcjsKICAgIGZvbnQtc2l6ZTogMTRweDsKICAgIHRyYW5zaXRpb246IGJhY2tncm91bmQgMC4zcyBlYXNlOwp9CgoucmVzZXQtYnRuOmhvdmVyIHsKICAgIGJhY2tncm91bmQ6ICNmZjUyNTI7Cn0KCi52aXN1YWwtaW5kaWNhdG9yIHsKICAgIGRpc3BsYXk6IGZsZXg7CiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjsKICAgIG1hcmdpbjogMzBweCAwOwp9CgouY29tcGFzcyB7CiAgICB3aWR0aDogMjAwcHg7CiAgICBoZWlnaHQ6IDIwMHB4OwogICAgYm9yZGVyOiAzcHggc29saWQgd2hpdGU7CiAgICBib3JkZXItcmFkaXVzOiA1MCU7CiAgICBwb3NpdGlvbjogcmVsYXRpdmU7CiAgICBiYWNrZ3JvdW5kOiByYWRpYWwtZ3JhZGllbnQoY2lyY2xlLCByZ2JhKDI1NSwyNTUsMjU1LDAuMSkgMCUsIHJnYmEoMjU1LDI1NSwyNTUsMC4wNSkgMTAwJSk7Cn0KCi5jb21wYXNzOjpiZWZvcmUgewogICAgY29udGVudDogJ04nOwogICAgcG9zaXRpb246IGFic29sdXRlOwogICAgdG9wOiAxMHB4OwogICAgbGVmdDogNTAlOwogICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVYKC01MCUpOwogICAgZm9udC13ZWlnaHQ6IGJvbGQ7CiAgICBmb250LXNpemU6IDE4cHg7Cn0KCi5jb21wYXNzOjphZnRlciB7CiAgICBjb250ZW50OiAnUyc7CiAgICBwb3NpdGlvbjogYWJzb2x1dGU7CiAgICBib3R0b206IDEwcHg7CiAgICBsZWZ0OiA1MCU7CiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVgoLTUwJSk7CiAgICBmb250LXdlaWdodDogYm9sZDsKICAgIGZvbnQtc2l6ZTogMThweDsKfQoKLm5lZWRsZSB7CiAgICBwb3NpdGlvbjogYWJzb2x1dGU7CiAgICB0b3A6IDUwJTsKICAgIGxlZnQ6IDUwJTsKICAgIHdpZHRoOiA0cHg7CiAgICBoZWlnaHQ6IDgwcHg7CiAgICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQodG8gdG9wLCAjZmY0NDQ0IDAlLCAjZmZmZjQ0IDEwMCUpOwogICAgdHJhbnNmb3JtLW9yaWdpbjogYm90dG9tIGNlbnRlcjsKICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC0xMDAlKTsKICAgIGJvcmRlci1yYWRpdXM6IDJweDsKICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAwLjFzIGVhc2U7Cn0KCi5jZW50ZXItZG90IHsKICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTsKICAgIHRvcDogNTAlOwogICAgbGVmdDogNTAlOwogICAgd2lkdGg6IDEycHg7CiAgICBoZWlnaHQ6IDEycHg7CiAgICBiYWNrZ3JvdW5kOiB3aGl0ZTsKICAgIGJvcmRlci1yYWRpdXM6IDUwJTsKICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpOwp9Cgouc3RhdHVzIHsKICAgIHRleHQtYWxpZ246IGNlbnRlcjsKICAgIHBhZGRpbmc6IDE1cHg7CiAgICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuMyk7CiAgICBib3JkZXItcmFkaXVzOiAxMHB4OwogICAgbWFyZ2luLXRvcDogMjBweDsKfQoKQG1lZGlhIChtYXgtd2lkdGg6IDc2OHB4KSB7CiAgICAuY29udGFpbmVyIHsKICAgICAgICBwYWRkaW5nOiAxMHB4OwogICAgfQogICAgCiAgICBoMSB7CiAgICAgICAgZm9udC1zaXplOiAyZW07CiAgICB9CiAgICAKICAgIC5zZW5zb3ItZGF0YSB7CiAgICAgICAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiAxZnI7CiAgICB9CiAgICAKICAgIC5jb21wYXNzIHsKICAgICAgICB3aWR0aDogMTUwcHg7CiAgICAgICAgaGVpZ2h0OiAxNTBweDsKICAgIH0KfQo=" rel="stylesheet"/>
  </head>
  <body>
   <div class="container">
    <h1>
-    Video + Sensor Recorder
+    iPhone IMU Reader
    </h1>
-   <div class="video-container">
-    <video autoplay="" id="videoPreview" muted="" playsinline="">
-    </video>
-   </div>
-   <div class="controls">
-    <button class="btn btn-start" id="startBtn">
-     Start Recording
-    </button>
-    <button class="btn btn-stop" disabled="" id="stopBtn">
-     Stop Recording
-    </button>
-    <button class="btn btn-download" disabled="" id="downloadBtn">
-     Download Data
-    </button>
-   </div>
-   <div class="status">
-    <div id="statusText">
-     Ready to record
-    </div>
-    <div id="timer">
-     00:00
-    </div>
-   </div>
+   <button id="requestPermission">
+    Request Sensor Permission
+   </button>
    <div class="sensor-data">
-    <h3>
-     Live Sensor Data
-    </h3>
-    <div class="sensor-row">
-     <span>
-      Accelerometer:
-     </span>
-     <span id="accelData">
-      x: 0, y: 0, z: 0
-     </span>
+    <div class="orientation-data">
+     <h2>
+      Device Orientation
+     </h2>
+     <div class="data-row">
+      <span>
+       Alpha (Z-axis/Yaw):
+      </span>
+      <span id="alpha">
+       --
+      </span>
+      °
+     </div>
+     <div class="data-row">
+      <span>
+       Beta (X-axis/Pitch):
+      </span>
+      <span id="beta">
+       --
+      </span>
+      °
+     </div>
+     <div class="data-row">
+      <span>
+       Gamma (Y-axis/Roll):
+      </span>
+      <span id="gamma">
+       --
+      </span>
+      °
+     </div>
     </div>
-    <div class="sensor-row">
-     <span>
-      Gyroscope:
-     </span>
-     <span id="gyroData">
-      x: 0, y: 0, z: 0
-     </span>
+    <div class="motion-data">
+     <h2>
+      Device Motion
+     </h2>
+     <div class="data-row">
+      <span>
+       Acceleration X:
+      </span>
+      <span id="accelX">
+       --
+      </span>
+      m/s²
+     </div>
+     <div class="data-row">
+      <span>
+       Acceleration Y:
+      </span>
+      <span id="accelY">
+       --
+      </span>
+      m/s²
+     </div>
+     <div class="data-row">
+      <span>
+       Acceleration Z:
+      </span>
+      <span id="accelZ">
+       --
+      </span>
+      m/s²
+     </div>
+     <div class="data-row">
+      <span>
+       Rotation Rate X:
+      </span>
+      <span id="rotX">
+       --
+      </span>
+      °/s
+     </div>
+     <div class="data-row">
+      <span>
+       Rotation Rate Y:
+      </span>
+      <span id="rotY">
+       --
+      </span>
+      °/s
+     </div>
+     <div class="data-row">
+      <span>
+       Rotation Rate Z:
+      </span>
+      <span id="rotZ">
+       --
+      </span>
+      °/s
+     </div>
+    </div>
+    <div class="computed-data">
+     <h2>
+      Computed Values
+     </h2>
+     <div class="data-row">
+      <span>
+       Compass Heading:
+      </span>
+      <span id="heading">
+       --
+      </span>
+      °
+     </div>
+     <div class="data-row">
+      <span>
+       Tilt Angle:
+      </span>
+      <span id="tilt">
+       --
+      </span>
+      °
+     </div>
+     <div class="data-row">
+      <span>
+       Direction:
+      </span>
+      <span id="direction">
+       --
+      </span>
+     </div>
+    </div>
+    <div class="speed-data">
+     <h2>
+      Speed &amp; Movement
+     </h2>
+     <div class="data-row">
+      <span>
+       Total Speed:
+      </span>
+      <span id="totalSpeed">
+       --
+      </span>
+      m/s
+     </div>
+     <div class="data-row">
+      <span>
+       Total Speed:
+      </span>
+      <span>
+       <span id="totalSpeedKmh">
+        --
+       </span>
+       km/h |
+       <span id="totalSpeedMph">
+        --
+       </span>
+       mph
+      </span>
+     </div>
+     <div class="data-row">
+      <span>
+       Directional Speed:
+      </span>
+      <span id="directionalSpeed">
+       --
+      </span>
+      m/s
+     </div>
+     <div class="data-row">
+      <span>
+       Directional Speed:
+      </span>
+      <span>
+       <span id="directionalSpeedKmh">
+        --
+       </span>
+       km/h |
+       <span id="directionalSpeedMph">
+        --
+       </span>
+       mph
+      </span>
+     </div>
+     <button class="reset-btn" id="resetSpeed">
+      Reset Speed
+     </button>
     </div>
    </div>
-   <div class="permissions">
-    <button class="btn btn-secondary" id="requestPermissions">
-     Request Permissions
-    </button>
+   <div class="visual-indicator">
+    <div class="compass" id="compass">
+     <div class="needle">
+     </div>
+     <div class="center-dot">
+     </div>
+    </div>
+   </div>
+   <div class="status" id="status">
+    Click "Request Sensor Permission" to start
    </div>
   </div>
-  <script>
-   class VideoSensorRecorder {
-    constructor() {
-        this.mediaRecorder = null;
-        this.stream = null;
-        this.recordedChunks = [];
-        this.sensorData = [];
-        this.isRecording = false;
-        this.startTime = null;
-        this.timerInterval = null;
-        
-        this.initializeElements();
-        this.bindEvents();
-        this.initializeCamera();
-    }
-    
-    initializeElements() {
-        this.videoPreview = document.getElementById('videoPreview');
-        this.startBtn = document.getElementById('startBtn');
-        this.stopBtn = document.getElementById('stopBtn');
-        this.downloadBtn = document.getElementById('downloadBtn');
-        this.statusText = document.getElementById('statusText');
-        this.timer = document.getElementById('timer');
-        this.accelData = document.getElementById('accelData');
-        this.gyroData = document.getElementById('gyroData');
-        this.requestPermissionsBtn = document.getElementById('requestPermissions');
-    }
-    
-    bindEvents() {
-        this.startBtn.addEventListener('click', () => this.startRecording());
-        this.stopBtn.addEventListener('click', () => this.stopRecording());
-        this.downloadBtn.addEventListener('click', () => this.downloadData());
-        this.requestPermissionsBtn.addEventListener('click', () => this.requestPermissions());
-    }
-    
-    async initializeCamera() {
-        try {
-            this.stream = await navigator.mediaDevices.getUserMedia({
-                video: { 
-                    facingMode: 'environment',
-                    width: { ideal: 1280 },
-                    height: { ideal: 720 }
-                },
-                audio: true
-            });
-            this.videoPreview.srcObject = this.stream;
-            this.statusText.textContent = 'Camera ready';
-        } catch (error) {
-            console.error('Error accessing camera:', error);
-            this.statusText.textContent = 'Camera access denied';
-        }
-    }
-    
-    async requestPermissions() {
-        try {
-            // Request device motion permission (iOS 13+)
-            if (typeof DeviceMotionEvent !== 'undefined' && typeof DeviceMotionEvent.requestPermission === 'function') {
-                const permission = await DeviceMotionEvent.requestPermission();
-                if (permission === 'granted') {
-                    this.startSensorListening();
-                    this.statusText.textContent = 'Sensor permissions granted';
-                } else {
-                    this.statusText.textContent = 'Sensor permissions denied';
-                }
-            } else {
-                // For non-iOS devices or older iOS versions
-                this.startSensorListening();
-                this.statusText.textContent = 'Sensors available';
-            }
-        } catch (error) {
-            console.error('Error requesting permissions:', error);
-            this.statusText.textContent = 'Error requesting permissions';
-        }
-    }
-    
-    startSensorListening() {
-        // Listen for device motion events
-        window.addEventListener('devicemotion', (event) => {
-            if (event.accelerationIncludingGravity) {
-                const accel = event.accelerationIncludingGravity;
-                this.accelData.textContent = `x: ${accel.x?.toFixed(2) || 0}, y: ${accel.y?.toFixed(2) || 0}, z: ${accel.z?.toFixed(2) || 0}`;
-            }
-            
-            if (event.rotationRate) {
-                const gyro = event.rotationRate;
-                this.gyroData.textContent = `x: ${gyro.alpha?.toFixed(2) || 0}, y: ${gyro.beta?.toFixed(2) || 0}, z: ${gyro.gamma?.toFixed(2) || 0}`;
-            }
-            
-            // Record sensor data if recording
-            if (this.isRecording) {
-                const timestamp = Date.now() - this.startTime;
-                this.sensorData.push({
-                    timestamp,
-                    accelerometer: event.accelerationIncludingGravity ? {
-                        x: event.accelerationIncludingGravity.x || 0,
-                        y: event.accelerationIncludingGravity.y || 0,
-                        z: event.accelerationIncludingGravity.z || 0
-                    } : null,
-                    gyroscope: event.rotationRate ? {
-                        alpha: event.rotationRate.alpha || 0,
-                        beta: event.rotationRate.beta || 0,
-                        gamma: event.rotationRate.gamma || 0
-                    } : null
-                });
-            }
-        });
-    }
-    
-    async startRecording() {
-        if (!this.stream) {
-            this.statusText.textContent = 'Camera not available';
-            return;
-        }
-        
-        try {
-            // Clear previous data
-            this.recordedChunks = [];
-            this.sensorData = [];
-            
-            // Setup media recorder
-            this.mediaRecorder = new MediaRecorder(this.stream, {
-                mimeType: 'video/mp4; codecs=avc1.42E01E,mp4a.40.2'
-            });
-            
-            this.mediaRecorder.ondataavailable = (event) => {
-                if (event.data.size > 0) {
-                    this.recordedChunks.push(event.data);
-                }
-            };
-            
-            this.mediaRecorder.onstop = () => {
-                this.downloadBtn.disabled = false;
-            };
-            
-            // Start recording
-            this.mediaRecorder.start(100); // Record in 100ms chunks
-            this.isRecording = true;
-            this.startTime = Date.now();
-            
-            // Update UI
-            this.startBtn.disabled = true;
-            this.stopBtn.disabled = false;
-            this.downloadBtn.disabled = true;
-            this.statusText.textContent = 'Recording...';
-            
-            // Start timer
-            this.startTimer();
-            
-        } catch (error) {
-            console.error('Error starting recording:', error);
-            this.statusText.textContent = 'Error starting recording';
-        }
-    }
-    
-    stopRecording() {
-        if (this.mediaRecorder && this.isRecording) {
-            this.mediaRecorder.stop();
-            this.isRecording = false;
-            
-            // Update UI
-            this.startBtn.disabled = false;
-            this.stopBtn.disabled = true;
-            this.statusText.textContent = 'Recording stopped';
-            
-            // Stop timer
-            this.stopTimer();
-        }
-    }
-    
-    startTimer() {
-        this.timerInterval = setInterval(() => {
-            if (this.startTime) {
-                const elapsed = Date.now() - this.startTime;
-                const minutes = Math.floor(elapsed / 60000);
-                const seconds = Math.floor((elapsed % 60000) / 1000);
-                this.timer.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-            }
-        }, 1000);
-    }
-    
-    stopTimer() {
-        if (this.timerInterval) {
-            clearInterval(this.timerInterval);
-            this.timerInterval = null;
-        }
-    }
-    
-    async downloadData() {
-        if (this.recordedChunks.length === 0) {
-            this.statusText.textContent = 'No recording to download';
-            return;
-        }
-        
-        try {
-            // Create timestamp for filenames
-            const timestamp = new Date().toISOString().replace(/[:.]/g, '-').split('T')[0] + '_' + 
-                             new Date().toISOString().replace(/[:.]/g, '-').split('T')[1].split('.')[0];
-            
-            // Create video blob
-            const videoBlob = new Blob(this.recordedChunks, { type: 'video/mp4' });
-            
-            // Create sensor data JSON
-            const sensorDataObj = {
-                recordingInfo: {
-                    startTime: new Date(this.startTime).toISOString(),
-                    duration: Date.now() - this.startTime,
-                    sampleCount: this.sensorData.length
-                },
-                sensorData: this.sensorData
-            };
-            
-            const sensorBlob = new Blob([JSON.stringify(sensorDataObj, null, 2)], { 
-                type: 'application/json' 
-            });
-            
-            this.statusText.textContent = 'Preparing downloads...';
-            
-            // Download video file
-            await this.downloadFile(videoBlob, `recording_${timestamp}.mp4`);
-            
-            // Wait a bit before downloading the second file (helps with iOS Safari)
-            await new Promise(resolve => setTimeout(resolve, 500));
-            
-            // Download sensor data
-            await this.downloadFile(sensorBlob, `sensor_data_${timestamp}.json`);
-            
-            this.statusText.textContent = 'Both files downloaded successfully!';
-            
-        } catch (error) {
-            console.error('Error downloading files:', error);
-            this.statusText.textContent = 'Error downloading files';
-        }
-    }
-    
-    downloadFile(blob, filename) {
-        return new Promise((resolve) => {
-            const url = URL.createObjectURL(blob);
-            const link = document.createElement('a');
-            link.href = url;
-            link.download = filename;
-            link.style.display = 'none';
-            
-            // Add to DOM, click, then remove
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            
-            // Clean up URL after a delay to ensure download starts
-            setTimeout(() => {
-                URL.revokeObjectURL(url);
-                resolve();
-            }, 1000);
-        });
-    }
-}
-
-// Initialize the app when the page loads
-document.addEventListener('DOMContentLoaded', () => {
-    new VideoSensorRecorder();
-});
-
-// Handle page visibility changes (important for iOS)
-document.addEventListener('visibilitychange', () => {
-    if (document.hidden) {
-        // Page is hidden, you might want to pause recording or handle accordingly
-        console.log('Page hidden');
-    } else {
-        // Page is visible again
-        console.log('Page visible');
-    }
-});
+  <script src="imu-processor.js">
   </script>
  </body>
 </html>
